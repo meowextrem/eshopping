@@ -73,8 +73,9 @@
 
         <?php } else { ?>
 
-            <?php $count = 0; ?>
-            <?php while ($count < 3) { ?>
+            <?php $count = 1; ?>
+            <?php $to_be_displayed = (count($all_featured_products) < 4 ) ? count($all_featured_products) : 4; ?>
+            <?php while ($count < $to_be_displayed) { ?>
                 <?php foreach($all_featured_products as $featured_product) { ?>
                     <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
                         <div class="card product-item border-0 mb-4">
