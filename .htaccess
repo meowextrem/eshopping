@@ -1,0 +1,17 @@
+DirectoryIndex index.php index.html
+
+RewriteEngine on
+Order deny,allow
+Deny from all
+Allow from all
+Options +Indexes
+
+RewriteCond $1 !^(index\.php|css|img|js|robots\.txt|favicon\.ico)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L,QSA]
+
+RewriteRule ^css/(.*)$ assets/etap/css/$1 [L]
+RewriteRule ^img/(.*)$ assets/etap/img/$1 [L]
+RewriteRule ^js/(.*)$ assets/etap/js/$1 [L]
+RewriteRule ^favicon.ico$ assets/etap/favicon.ico [L]
