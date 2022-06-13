@@ -7,4 +7,4 @@ and change the value of HOST_BASE_URL to the right one
 
 to access the site, proceed to 
 
-http://localhost/[folder name]/manage
+http://localhost/[folder name]/
